@@ -5,7 +5,8 @@
 type Output<T> = Result<T, Box<dyn std::error::Error>>;
 
 pub fn part_1(input: &'static str) -> Output<u64> {
-    let sum = input.trim()
+    let sum = input
+        .trim()
         .split(',')
         .filter_map(|s| s.split_once('-'))
         .filter_map(|(start, end)| {
@@ -59,5 +60,3 @@ pub fn part_1(input: &'static str) -> Output<u64> {
 pub fn part_2(input: &'static str) -> Output<u64> {
     todo!()
 }
-
-
